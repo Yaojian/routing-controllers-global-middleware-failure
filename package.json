@@ -1,0 +1,58 @@
+{
+  "name": "routing-controllers-global-middleware-failure",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaojian/routing-controllers-global-middleware-failure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaojian/routing-controllers-global-middleware-failure/issues"
+  },
+  "homepage": "https://github.com/Yaojian/routing-controllers-global-middleware-failure#readme",
+  "devDependencies": {
+    "@types/jest": "^22.1.3",
+    "@types/koa": "^2.0.44",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-router": "^7.0.27",
+    "ts-jest": "^22.0.4",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "inversify": "^4.10.0",
+    "jest": "^22.3.0",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "reflect-metadata": "^0.1.12",
+    "routing-controllers": "^0.7.6"
+  },
+  "jest": {
+    "verbose": true,
+    "globals": {
+      "ts-jest": {}
+    },
+    "roots": [
+      "./tests"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "mapCoverage": true,
+    "testRegex": "\\.(test|spec)\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}
