@@ -26,7 +26,6 @@
     "typescript": "^2.7.2"
   },
   "dependencies": {
-    "inversify": "^4.10.0",
     "jest": "^22.3.0",
     "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
