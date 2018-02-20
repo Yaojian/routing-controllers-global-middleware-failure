@@ -26,9 +26,12 @@ describe('rooting-controllers-global-middleware', () => {
 
         useContainer({get: getter});
 
+        const options = {
+            middlewares: []
+        };
         /* routing-controllers throws exception because it cannot retrieve the instance of `ExampleMiddleware`
          * from the container. This may be a bug because the middleware is not included in `RoutingControllersOptions.middlewares` */
-        createKoaServer();
+        createKoaServer(options);
     });
     it('should work when the middleware is registered explicitly', () => {
         const getter = <T>(someClass: { new(...args: any[]): T } | Function): T => {
@@ -36,6 +39,9 @@ describe('rooting-controllers-global-middleware', () => {
             throw new Error(`Service not found for [${someClass}]`);
         };
         useContainer({get: getter});
-        createKoaServer();
+        const options = {
+            middlewares: []
+        };
+        createKoaServer(options);
     });
 });
